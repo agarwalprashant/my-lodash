@@ -18,11 +18,13 @@ const LARGE_ARRAY_SIZE = 200
  * @returns {Array} Returns the new duplicate free array.
  */
 function baseUniq(array, iteratee, comparator) {
+  array //?
   let index = -1
   let includes = arrayIncludes
   let isCommon = true
 
   const { length } = array
+  length //?
   const result = []
   let seen = result
 
@@ -43,11 +45,12 @@ function baseUniq(array, iteratee, comparator) {
     seen = iteratee ? [] : result
   }
   outer:
-  while (++index < length) {
+  while (++index /*?*/ < length) {
     let value = array[index]
     const computed = iteratee ? iteratee(value) : value
 
     value = (comparator || value !== 0) ? value : 0
+    value //?
     if (isCommon && computed === computed) {
       let seenIndex = seen.length
       while (seenIndex--) {

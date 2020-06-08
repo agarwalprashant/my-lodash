@@ -21,6 +21,8 @@ function createMathOperation(operator, defaultValue) {
       return other
     }
     if (typeof value === 'string' || typeof other === 'string') {
+      value //?
+      other //?
       value = baseToString(value)
       other = baseToString(other)
     }

@@ -18,6 +18,7 @@ import baseUniq from './.internal/baseUniq.js'
  * // => [2, 1]
  */
 function uniq(array) {
+  array //?
   return (array != null && array.length)
     ? baseUniq(array)
     : []

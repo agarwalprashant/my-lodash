@@ -19,6 +19,10 @@
  * // => [3, 4]
  */
 function slice(array, start, end) {
+  array
+  start
+  end
+  Array.isArray(array) //?
   let length = array == null ? 0 : array.length
   if (!length) {
     return []
